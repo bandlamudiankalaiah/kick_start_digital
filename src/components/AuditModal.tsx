@@ -104,15 +104,15 @@ export const AuditModal: React.FC<AuditModalProps> = ({
       role="dialog"
       aria-modal="true"
       aria-labelledby="audit-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-xs animate-in fade-in duration-150"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150"
     >
-      <div className="bg-slate-900 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-800 text-slate-200 max-h-[92vh] overflow-y-auto space-y-6 relative">
+      <div className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-zinc-200 max-h-[92vh] overflow-y-auto space-y-6 relative">
         
         {/* Close Button */}
         <button
           id="close-audit-modal-btn"
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 text-slate-400 hover:text-white rounded-xl hover:bg-slate-800 transition-colors"
+          className="absolute top-5 right-5 p-2 text-zinc-600 hover:text-zinc-900 rounded-xl hover:bg-zinc-100 transition-colors"
           aria-label="Close audit tool"
         >
           <X className="w-5 h-5" />
@@ -120,14 +120,14 @@ export const AuditModal: React.FC<AuditModalProps> = ({
 
         {/* Modal Header */}
         <div className="space-y-1">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-semibold border border-indigo-500/20">
-            <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold border border-emerald-200">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             <span>Instant Digital Audit Engine</span>
           </div>
-          <h3 id="audit-modal-title" className="text-2xl font-bold text-white tracking-tight">
+          <h3 id="audit-modal-title" className="text-2xl font-bold text-zinc-950 tracking-tight">
             Free 360° Website & Conversion Audit
           </h3>
-          <p className="text-xs sm:text-sm text-slate-400">
+          <p className="text-xs sm:text-sm text-zinc-600">
             Enter your domain to analyze Core Web Vitals speed, mobile responsiveness, SEO ranking health, and conversion barriers.
           </p>
         </div>
@@ -136,7 +136,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({
         <form onSubmit={handleSubmit} className="space-y-3">
           <div className="flex flex-col sm:flex-row gap-2">
             <div className="relative flex-1">
-              <Globe className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+              <Globe className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-600" />
               <input
                 id="audit-input-url"
                 type="text"
@@ -144,14 +144,14 @@ export const AuditModal: React.FC<AuditModalProps> = ({
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 placeholder="Enter domain (e.g. mybusiness.co.nz)"
-                className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-800 bg-slate-950 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                className="w-full pl-10 pr-4 py-3 rounded-xl border border-zinc-300 text-sm text-zinc-900 placeholder:text-zinc-600 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
               />
             </div>
             <button
               type="submit"
               id="run-audit-submit-btn"
               disabled={isScanning}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-all disabled:opacity-50 cursor-pointer shadow-lg shadow-indigo-600/25"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-zinc-950 hover:bg-zinc-800 text-white text-xs font-bold transition-all disabled:opacity-50 cursor-pointer"
             >
               {isScanning ? (
                 <>
@@ -160,7 +160,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({
                 </>
               ) : (
                 <>
-                  <Zap className="w-4 h-4 text-white" />
+                  <Zap className="w-4 h-4 text-emerald-400" />
                   <span>Analyze Website</span>
                 </>
               )}
@@ -171,12 +171,12 @@ export const AuditModal: React.FC<AuditModalProps> = ({
         {/* Loading Animation */}
         {isScanning && (
           <div className="py-12 text-center space-y-4">
-            <div className="w-12 h-12 rounded-full border-4 border-indigo-500 border-t-transparent animate-spin mx-auto" />
+            <div className="w-12 h-12 rounded-full border-4 border-emerald-500 border-t-transparent animate-spin mx-auto" />
             <div className="space-y-1">
-              <h4 className="text-sm font-bold text-white">
+              <h4 className="text-sm font-bold text-zinc-900">
                 Auditing Core Web Vitals & Conversion Leaks...
               </h4>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-zinc-600">
                 Checking server latency, mobile viewport rendering, and organic search metadata.
               </p>
             </div>
@@ -188,9 +188,9 @@ export const AuditModal: React.FC<AuditModalProps> = ({
           <div className="space-y-6 animate-in fade-in duration-200">
             
             {/* Top Score Matrix */}
-            <div className="p-4 rounded-2xl bg-slate-950 text-white space-y-4 border border-slate-800">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <span className="text-xs text-slate-400 font-mono truncate max-w-[240px]">
+            <div className="p-4 rounded-2xl bg-zinc-950 text-white space-y-4">
+              <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
+                <span className="text-xs text-zinc-400 font-mono truncate max-w-[240px]">
                   {auditResult.url}
                 </span>
                 <span className="text-xs font-bold text-emerald-400">
@@ -199,39 +199,39 @@ export const AuditModal: React.FC<AuditModalProps> = ({
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-                <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                <div className="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800">
                   <div className="text-2xl font-extrabold text-white">
-                    {auditResult.speedScore}<span className="text-xs text-slate-500 font-normal">/100</span>
+                    {auditResult.speedScore}<span className="text-xs text-zinc-600 font-normal">/100</span>
                   </div>
-                  <span className="text-[11px] text-slate-400 block mt-0.5">Speed (LCP)</span>
+                  <span className="text-[11px] text-zinc-400 block mt-0.5">Speed (LCP)</span>
                 </div>
 
-                <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                <div className="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800">
                   <div className="text-2xl font-extrabold text-white">
-                    {auditResult.mobileScore}<span className="text-xs text-slate-500 font-normal">/100</span>
+                    {auditResult.mobileScore}<span className="text-xs text-zinc-600 font-normal">/100</span>
                   </div>
-                  <span className="text-[11px] text-slate-400 block mt-0.5">Mobile UX</span>
+                  <span className="text-[11px] text-zinc-400 block mt-0.5">Mobile UX</span>
                 </div>
 
-                <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
+                <div className="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800">
                   <div className="text-2xl font-extrabold text-white">
-                    {auditResult.seoScore}<span className="text-xs text-slate-500 font-normal">/100</span>
+                    {auditResult.seoScore}<span className="text-xs text-zinc-600 font-normal">/100</span>
                   </div>
-                  <span className="text-[11px] text-slate-400 block mt-0.5">SEO Health</span>
+                  <span className="text-[11px] text-zinc-400 block mt-0.5">SEO Health</span>
                 </div>
 
-                <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
-                  <div className="text-2xl font-extrabold text-indigo-400">
-                    {auditResult.croScore}<span className="text-xs text-slate-500 font-normal">/100</span>
+                <div className="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800">
+                  <div className="text-2xl font-extrabold text-emerald-400">
+                    {auditResult.croScore}<span className="text-xs text-zinc-600 font-normal">/100</span>
                   </div>
-                  <span className="text-[11px] text-slate-400 block mt-0.5">CRO Score</span>
+                  <span className="text-[11px] text-zinc-400 block mt-0.5">CRO Score</span>
                 </div>
               </div>
             </div>
 
             {/* Diagnostic Insights */}
             <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-600">
                 Key Findings & Conversion Bottlenecks:
               </h4>
 
@@ -241,22 +241,22 @@ export const AuditModal: React.FC<AuditModalProps> = ({
                     key={idx}
                     className={`p-3.5 rounded-xl border text-xs flex items-start gap-3 ${
                       item.type === 'critical'
-                        ? 'bg-rose-500/10 border-rose-500/20 text-rose-300'
+                        ? 'bg-rose-50 border-rose-200 text-rose-950'
                         : item.type === 'warning'
-                        ? 'bg-amber-500/10 border-amber-500/20 text-amber-300'
-                        : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-300'
+                        ? 'bg-amber-50 border-amber-200 text-amber-950'
+                        : 'bg-emerald-50 border-emerald-200 text-emerald-950'
                     }`}
                   >
                     {item.type === 'critical' ? (
-                      <AlertTriangle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                      <AlertTriangle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                     ) : item.type === 'warning' ? (
-                      <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                      <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                     ) : (
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                     )}
                     <div className="space-y-0.5">
-                      <div className="font-bold text-white">{item.title}</div>
-                      <div className="text-slate-300 leading-relaxed">{item.description}</div>
+                      <div className="font-bold">{item.title}</div>
+                      <div className="text-zinc-700 leading-relaxed">{item.description}</div>
                     </div>
                   </div>
                 ))}
@@ -264,12 +264,12 @@ export const AuditModal: React.FC<AuditModalProps> = ({
             </div>
 
             {/* Modal Bottom Conversion CTA */}
-            <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="space-y-0.5 text-center sm:text-left">
-                <div className="text-xs font-bold text-white">
+                <div className="text-xs font-bold text-zinc-950">
                   Want Kickstart Digital to Fix These Bottlenecks?
                 </div>
-                <div className="text-[11px] text-slate-400">
+                <div className="text-[11px] text-zinc-600">
                   We will build a custom roadmap to elevate these scores to 95+ and double your leads.
                 </div>
               </div>
@@ -280,7 +280,7 @@ export const AuditModal: React.FC<AuditModalProps> = ({
                   onApplyAuditToEnquiry(auditResult.url);
                   onClose();
                 }}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-all shadow-lg shadow-indigo-600/25 cursor-pointer whitespace-nowrap"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-sm cursor-pointer whitespace-nowrap"
               >
                 <span>Get Step-by-Step Fix Plan</span>
                 <ArrowRight className="w-3.5 h-3.5" />

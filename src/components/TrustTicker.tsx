@@ -15,13 +15,13 @@ export const TrustTicker: React.FC = () => {
     <section 
       id="trust-and-credentials" 
       aria-label="Accreditations and Trust" 
-      className="bg-slate-900 border-b border-slate-800 py-10"
+      className="bg-white border-b border-zinc-200 py-10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Subtle Section Tag */}
         <div className="text-center mb-6">
-          <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
+          <p className="text-xs font-bold uppercase tracking-wider text-zinc-600">
             Trusted by Ambitious Brands Across New Zealand & Australasia
           </p>
         </div>
@@ -31,15 +31,15 @@ export const TrustTicker: React.FC = () => {
           {partnerBadges.map((badge, idx) => (
             <div
               key={idx}
-              className="p-3.5 rounded-xl bg-slate-950 border border-slate-800 hover:border-indigo-500/40 transition-all flex flex-col items-center justify-center text-center group"
+              className="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80 hover:border-zinc-300 transition-all flex flex-col items-center justify-center text-center group"
             >
-              <div className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-indigo-400 mb-2 shadow-2xs group-hover:scale-105 group-hover:text-indigo-300 transition-all">
+              <div className="w-8 h-8 rounded-lg bg-white border border-zinc-200 flex items-center justify-center text-emerald-600 mb-2 shadow-2xs group-hover:scale-105 transition-transform">
                 <ShieldCheck className="w-4 h-4" />
               </div>
-              <span className="text-xs font-bold text-white block leading-tight">
+              <span className="text-xs font-bold text-zinc-900 block leading-tight">
                 {badge.name}
               </span>
-              <span className="text-[10px] text-slate-400 font-medium block mt-0.5">
+              <span className="text-[10px] text-zinc-600 font-medium block mt-0.5">
                 {badge.type}
               </span>
             </div>
@@ -47,23 +47,23 @@ export const TrustTicker: React.FC = () => {
         </div>
 
         {/* High-Impact Stat Bar */}
-        <div className="bg-slate-950 rounded-2xl p-6 sm:p-8 text-white shadow-xl border border-slate-800">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
+        <div className="bg-zinc-950 rounded-2xl p-6 sm:p-8 text-white shadow-md">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-zinc-800">
             
             <div className="pt-3 md:pt-0">
               <span className="text-3xl sm:text-4xl font-extrabold text-white block tracking-tight">
                 {AGENCY_INFO.stats.totalRevenueGenerated}
               </span>
-              <span className="text-xs font-medium text-slate-400 mt-1 block">
+              <span className="text-xs font-medium text-zinc-400 mt-1 block">
                 Tracked Revenue Generated
               </span>
             </div>
 
             <div className="pt-3 md:pt-0 md:pl-4">
-              <span className="text-3xl sm:text-4xl font-extrabold text-indigo-400 block tracking-tight">
+              <span className="text-3xl sm:text-4xl font-extrabold text-emerald-400 block tracking-tight">
                 {AGENCY_INFO.stats.averageLeadIncrease}
               </span>
-              <span className="text-xs font-medium text-slate-400 mt-1 block">
+              <span className="text-xs font-medium text-zinc-400 mt-1 block">
                 Average Qualified Lead Surge
               </span>
             </div>
@@ -72,7 +72,7 @@ export const TrustTicker: React.FC = () => {
               <span className="text-3xl sm:text-4xl font-extrabold text-white block tracking-tight">
                 {AGENCY_INFO.stats.averageRoas}
               </span>
-              <span className="text-xs font-medium text-slate-400 mt-1 block">
+              <span className="text-xs font-medium text-zinc-400 mt-1 block">
                 Average Client ROAS
               </span>
             </div>
@@ -83,10 +83,10 @@ export const TrustTicker: React.FC = () => {
                   <Star key={i} className="w-4 h-4 fill-amber-400" />
                 ))}
               </div>
-              <span className="text-xs font-semibold text-slate-200 block">
+              <span className="text-xs font-semibold text-zinc-200 block">
                 4.9 / 5.0 Google Rating
               </span>
-              <span className="text-[11px] text-slate-500 block">
+              <span className="text-[11px] text-zinc-600 block">
                 From 64+ Verified NZ Clients
               </span>
             </div>

@@ -66,7 +66,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen bg-white text-zinc-900 font-sans antialiased selection:bg-emerald-500 selection:text-zinc-950">
       
       {/* Primary Header Navigation */}
       <Header

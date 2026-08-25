@@ -76,28 +76,28 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
       role="dialog"
       aria-modal="true"
       aria-labelledby="dossier-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-xs animate-in fade-in duration-150"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-xs animate-in fade-in duration-150"
     >
-      <div className="bg-slate-900 text-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-slate-800 max-h-[92vh] overflow-y-auto space-y-6 relative">
+      <div className="bg-zinc-950 text-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-zinc-800 max-h-[92vh] overflow-y-auto space-y-6 relative">
         
         {/* Close Button */}
         <button
           id="close-dossier-modal-btn"
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 text-slate-400 hover:text-white rounded-xl hover:bg-slate-800 transition-colors"
+          className="absolute top-5 right-5 p-2 text-zinc-400 hover:text-white rounded-xl hover:bg-zinc-800 transition-colors"
           aria-label="Close dossier"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Modal Header */}
-        <div className="space-y-2 border-b border-slate-800 pb-5">
+        <div className="space-y-2 border-b border-zinc-800 pb-5">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-semibold border border-indigo-500/20">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold border border-amber-500/20">
               <FileCode2 className="w-3.5 h-3.5" />
               <span>Assessment Submission Dossier</span>
             </span>
-            <span className="text-xs text-slate-400">
+            <span className="text-xs text-zinc-400">
               For Jana & Lakshmi @ Kickstart Digital
             </span>
           </div>
@@ -105,20 +105,20 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
           <h3 id="dossier-modal-title" className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             Developer Assessment & Architecture Report
           </h3>
-          <p className="text-xs sm:text-sm text-slate-400">
+          <p className="text-xs sm:text-sm text-zinc-400">
             A comprehensive overview of the design decisions, technical architecture, WordPress mapping, performance optimizations, and commercial conversion strategy.
           </p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 border-b border-slate-800">
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 border-b border-zinc-800">
           <button
             id="tab-architecture-btn"
             onClick={() => setActiveTab('architecture')}
             className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'architecture'
-                ? 'bg-indigo-600 text-white shadow-sm'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
@@ -130,8 +130,8 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
             onClick={() => setActiveTab('wordpress')}
             className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'wordpress'
-                ? 'bg-indigo-600 text-white shadow-sm'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
             }`}
           >
             <Code2 className="w-3.5 h-3.5" />
@@ -143,8 +143,8 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
             onClick={() => setActiveTab('conversion')}
             className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'conversion'
-                ? 'bg-indigo-600 text-white shadow-sm'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
             }`}
           >
             <Zap className="w-3.5 h-3.5" />
@@ -156,8 +156,8 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
             onClick={() => setActiveTab('submission')}
             className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'submission'
-                ? 'bg-indigo-600 text-white shadow-sm'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
+                : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
             }`}
           >
             <Terminal className="w-3.5 h-3.5" />
@@ -167,10 +167,10 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
 
         {/* Tab 1: Architecture */}
         {activeTab === 'architecture' && (
-          <div className="space-y-4 text-xs text-slate-300 leading-relaxed animate-in fade-in duration-150">
-            <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+          <div className="space-y-4 text-xs text-zinc-300 leading-relaxed animate-in fade-in duration-150">
+            <div className="p-4 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-2">
               <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                <Cpu className="w-4 h-4 text-indigo-400" />
+                <Cpu className="w-4 h-4 text-emerald-400" />
                 Technical Stack & Decision Rationale
               </h4>
               <p>
@@ -179,30 +179,30 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1.5">
+              <div className="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 space-y-1.5">
                 <span className="font-bold text-white block">⚡ Core Web Vitals Tuning</span>
-                <p className="text-slate-400">
+                <p className="text-zinc-400">
                   Targeting sub-1.0s Largest Contentful Paint (LCP), 0 Cumulative Layout Shift (CLS), and instantaneous responsiveness (INP).
                 </p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1.5">
+              <div className="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 space-y-1.5">
                 <span className="font-bold text-white block">📱 Mobile-First Ergonomics</span>
-                <p className="text-slate-400">
+                <p className="text-zinc-400">
                   Every button exceeds the 44px touch target standard; sticky floating conversion actions ensure seamless mobile conversion rates.
                 </p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1.5">
+              <div className="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 space-y-1.5">
                 <span className="font-bold text-white block">🔍 Semantic SEO & Schema</span>
-                <p className="text-slate-400">
+                <p className="text-zinc-400">
                   Structured with semantic HTML5 (`header`, `main`, `section`, `article`, `footer`, `nav`, `aside`) and ready for JSON-LD schema injection.
                 </p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 space-y-1.5">
+              <div className="p-3.5 rounded-xl bg-zinc-900/60 border border-zinc-800 space-y-1.5">
                 <span className="font-bold text-white block">🛡️ Zero Dependency Bloat</span>
-                <p className="text-slate-400">
+                <p className="text-zinc-400">
                   No heavy UI suites or bloated stylesheets; pure utility CSS and targeted micro-libraries (`lucide-react`, `canvas-confetti`).
                 </p>
               </div>
@@ -212,10 +212,10 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
 
         {/* Tab 2: WordPress Parity */}
         {activeTab === 'wordpress' && (
-          <div className="space-y-4 text-xs text-slate-300 leading-relaxed animate-in fade-in duration-150">
-            <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+          <div className="space-y-4 text-xs text-zinc-300 leading-relaxed animate-in fade-in duration-150">
+            <div className="p-4 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-2">
               <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                <Code2 className="w-4 h-4 text-indigo-400" />
+                <Code2 className="w-4 h-4 text-emerald-400" />
                 How This Maps 1:1 to Custom WordPress Gutenberg Blocks
               </h4>
               <p>
@@ -224,29 +224,29 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
             </div>
 
             <div className="space-y-2 font-mono text-[11px]">
-              <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
-                <span className="text-indigo-400">Hero.tsx</span>
-                <span className="text-slate-400">wp-block / `kickstart/hero-conversion`</span>
+              <div className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-between">
+                <span className="text-emerald-400">Hero.tsx</span>
+                <span className="text-zinc-400">wp-block / `kickstart/hero-conversion`</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
-                <span className="text-indigo-400">TrustTicker.tsx</span>
-                <span className="text-slate-400">wp-block / `kickstart/trust-metrics`</span>
+              <div className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-between">
+                <span className="text-emerald-400">TrustTicker.tsx</span>
+                <span className="text-zinc-400">wp-block / `kickstart/trust-metrics`</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
-                <span className="text-indigo-400">ServicesSection.tsx</span>
-                <span className="text-slate-400">wp-block / `kickstart/services-grid`</span>
+              <div className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-between">
+                <span className="text-emerald-400">ServicesSection.tsx</span>
+                <span className="text-zinc-400">wp-block / `kickstart/services-grid`</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
-                <span className="text-indigo-400">RoiCalculator.tsx</span>
-                <span className="text-slate-400">wp-block / `kickstart/interactive-roi-calc`</span>
+              <div className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-between">
+                <span className="text-emerald-400">RoiCalculator.tsx</span>
+                <span className="text-zinc-400">wp-block / `kickstart/interactive-roi-calc`</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
-                <span className="text-indigo-400">WhyUsSection.tsx</span>
-                <span className="text-slate-400">wp-block / `kickstart/comparison-matrix`</span>
+              <div className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-between">
+                <span className="text-emerald-400">WhyUsSection.tsx</span>
+                <span className="text-zinc-400">wp-block / `kickstart/comparison-matrix`</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between">
-                <span className="text-indigo-400">EnquiryForm.tsx</span>
-                <span className="text-slate-400">wp-block / `kickstart/multi-step-lead-engine`</span>
+              <div className="p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-between">
+                <span className="text-emerald-400">EnquiryForm.tsx</span>
+                <span className="text-zinc-400">wp-block / `kickstart/multi-step-lead-engine`</span>
               </div>
             </div>
           </div>
@@ -254,10 +254,10 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
 
         {/* Tab 3: Conversion Strategy */}
         {activeTab === 'conversion' && (
-          <div className="space-y-4 text-xs text-slate-300 leading-relaxed animate-in fade-in duration-150">
-            <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+          <div className="space-y-4 text-xs text-zinc-300 leading-relaxed animate-in fade-in duration-150">
+            <div className="p-4 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-2">
               <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                <Zap className="w-4 h-4 text-indigo-400" />
+                <Zap className="w-4 h-4 text-emerald-400" />
                 Commercial Conversion Strategy & Psychology
               </h4>
               <p>
@@ -265,7 +265,7 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
               </p>
             </div>
 
-            <ol className="space-y-2.5 list-decimal list-inside text-slate-300">
+            <ol className="space-y-2.5 list-decimal list-inside text-zinc-300">
               <li>
                 <strong className="text-white">Immediate Value & Proof:</strong> Clear benefit-driven headline, Google Partner accreditation, and instant interactive audit bar above the fold.
               </li>
@@ -287,13 +287,13 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
 
         {/* Tab 4: Submission Summary */}
         {activeTab === 'submission' && (
-          <div className="space-y-4 text-xs text-slate-300 leading-relaxed animate-in fade-in duration-150">
+          <div className="space-y-4 text-xs text-zinc-300 leading-relaxed animate-in fade-in duration-150">
             <div className="flex items-center justify-between">
               <span className="font-bold text-white">Copyable Assessment Summary for Reviewers:</span>
               <button
                 id="copy-submission-text-btn"
                 onClick={handleCopySubmission}
-                className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition-all shadow-md shadow-indigo-600/25 cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-zinc-950 text-xs font-bold transition-all cursor-pointer"
               >
                 {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                 <span>{copied ? 'Copied to Clipboard!' : 'Copy Summary'}</span>
@@ -305,18 +305,18 @@ AI was utilized for direct copy framing, architectural boilerplate acceleration,
               readOnly
               rows={12}
               value={submissionText}
-              className="w-full p-4 rounded-2xl bg-slate-950 border border-slate-800 text-[11px] font-mono text-slate-300 leading-relaxed focus:outline-none resize-none"
+              className="w-full p-4 rounded-2xl bg-zinc-900 border border-zinc-800 text-[11px] font-mono text-zinc-300 leading-relaxed focus:outline-none resize-none"
             />
           </div>
         )}
 
         {/* Footer Actions */}
-        <div className="flex items-center justify-between pt-4 border-t border-slate-800 text-xs text-slate-400">
+        <div className="flex items-center justify-between pt-4 border-t border-zinc-800 text-xs text-zinc-400">
           <span>Kickstart Digital Web / WordPress Developer Assessment</span>
           <button
             id="close-dossier-bottom-btn"
             onClick={onClose}
-            className="px-5 py-2.5 rounded-full bg-slate-800 hover:bg-slate-700 text-white font-semibold border border-slate-700 transition-colors cursor-pointer"
+            className="px-5 py-2.5 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white font-semibold transition-colors cursor-pointer"
           >
             Close Dossier
           </button>
